@@ -1,0 +1,15 @@
+[Unit]
+Description=Minecraft Server
+After=network-online.target
+
+[Container]
+Image=docker.io/itzg/minecraft-server:latest
+Environment=EULA=TRUE
+Environment=VERSION=1.20.4
+PublishPort=25565:25565
+PublishPort=25575:25575
+Memory=6g
+Volume=/var/mc-data/:/data:Z
+
+[Service]
+Restart=always
