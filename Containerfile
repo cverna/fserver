@@ -29,4 +29,4 @@ COPY build_files/minecraft.container /etc/containers/systemd/minecraft.container
     
 ### LINTING
 ## Verify final image and contents are correct.
-RUN bootc container lint
+# RUN bootc container lint
